@@ -1,0 +1,43 @@
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+  <div >
+    <a class="navbar-brand" href="#">
+      
+    </a>
+  </div>
+  <a class="navbar-brand"  href="#">DIKSUCHI</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="explore">Explore</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="contactus">Contact Us</a>
+      </li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="!ds.isLoggedIn"><a class="nav-link" routerLink="login" style="color: whitesmoke;"><i class="fas fa-sign-in-alt" style="color:bisque;  margin-right: 5px;"></i>login</a></li>
+      <li *ngIf="ds.isLoggedIn"><a class="nav-link" routerLink="login" style="color: whitesmoke;"><i class="fas fa-sign-in-alt" style="color:bisque;  margin-right: 5px;"></i>logout</a></li>
+      <li><a class="nav-link" routerLink="signup" style="color: whitesmoke; margin-right: 10px;"><i class="fas fa-user" style="color:bisque; margin-right: 5px;"></i>Sign Up&nbsp;</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+
+
+<div>
+  <router-outlet>
+   </router-outlet>
+  </div>
+
+
